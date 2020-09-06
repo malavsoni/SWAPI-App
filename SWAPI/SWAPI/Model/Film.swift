@@ -9,11 +9,13 @@
 import Foundation
 
 // MARK: - Film
-struct Film: Codable {
+struct Film: Codable, Hashable, Identifiable {
+    let id = UUID()
     let title: String
     let episodeID: Int
     let openingCrawl, director, producer, releaseDate: String
-    let characters, planets, starships, vehicles: [String]
+    var charactersUrl, planets, starships, vehicles: [String]
+    var characters:[Character] = []
     let species: [String]
     let created, edited: String
     let url: String
@@ -24,6 +26,7 @@ struct Film: Codable {
         case openingCrawl = "opening_crawl"
         case director, producer
         case releaseDate = "release_date"
-        case characters, planets, starships, vehicles, species, created, edited, url
+        case charactersUrl = "characters"
+        case planets, starships, vehicles, species, created, edited, url
     }
 }

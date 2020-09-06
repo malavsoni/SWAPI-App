@@ -11,6 +11,9 @@
 		8358FD0EAF513DAA401C1910 /* Pods_SWAPI_SWAPIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F493D8EE087DE0203D3FF303 /* Pods_SWAPI_SWAPIUITests.framework */; };
 		B678A60F250503DB00EDEAB5 /* DestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678A60E250503DB00EDEAB5 /* DestinationView.swift */; };
 		B678A61125050BDF00EDEAB5 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678A61025050BDE00EDEAB5 /* Film.swift */; };
+		B678A61325050D4600EDEAB5 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678A61225050D4600EDEAB5 /* APIRouter.swift */; };
+		B678A61525051AE400EDEAB5 /* KeyValueStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678A61425051AE400EDEAB5 /* KeyValueStack.swift */; };
+		B678A61725051BE700EDEAB5 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678A61625051BE600EDEAB5 /* Loader.swift */; };
 		B6CE503F250485E200E436EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CE503E250485E200E436EE /* AppDelegate.swift */; };
 		B6CE5041250485E200E436EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CE5040250485E200E436EE /* SceneDelegate.swift */; };
 		B6CE5044250485E200E436EE /* SWAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6CE5042250485E200E436EE /* SWAPI.xcdatamodeld */; };
@@ -54,6 +57,9 @@
 		A15583383E5559D336837C58 /* Pods_SWAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B678A60E250503DB00EDEAB5 /* DestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationView.swift; sourceTree = "<group>"; };
 		B678A61025050BDE00EDEAB5 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		B678A61225050D4600EDEAB5 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		B678A61425051AE400EDEAB5 /* KeyValueStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStack.swift; sourceTree = "<group>"; };
+		B678A61625051BE600EDEAB5 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		B6CE503B250485E200E436EE /* SWAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CE503E250485E200E436EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CE5040250485E200E436EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,8 +142,19 @@
 			isa = PBXGroup;
 			children = (
 				B678A60E250503DB00EDEAB5 /* DestinationView.swift */,
+				B678A61425051AE400EDEAB5 /* KeyValueStack.swift */,
+				B678A61625051BE600EDEAB5 /* Loader.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B678A618250526B500EDEAB5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B6CE50742504869D00E436EE /* CharactersListView */,
+				B6CE5075250486CD00E436EE /* CharactersDetailsView */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		B6CE5032250485E200E436EE = {
@@ -167,9 +184,9 @@
 			children = (
 				B6CE503E250485E200E436EE /* AppDelegate.swift */,
 				B6CE5040250485E200E436EE /* SceneDelegate.swift */,
-				B6F455372504CB0F00723A7E /* Model */,
 				B6CE5072250485F300E436EE /* Utility */,
-				B6CE5071250485EB00E436EE /* Screens */,
+				B6F455372504CB0F00723A7E /* Model */,
+				B6CE5071250485EB00E436EE /* UI */,
 				B6CE5047250485E200E436EE /* Assets.xcassets */,
 				B6CE504C250485E200E436EE /* LaunchScreen.storyboard */,
 				B6CE504F250485E200E436EE /* Info.plist */,
@@ -205,14 +222,13 @@
 			path = SWAPIUITests;
 			sourceTree = "<group>";
 		};
-		B6CE5071250485EB00E436EE /* Screens */ = {
+		B6CE5071250485EB00E436EE /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				B678A60D250503C800EDEAB5 /* Components */,
-				B6CE50742504869D00E436EE /* CharactersListView */,
-				B6CE5075250486CD00E436EE /* CharactersDetailsView */,
+				B678A618250526B500EDEAB5 /* Screens */,
 			);
-			path = Screens;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		B6CE5072250485F300E436EE /* Utility */ = {
@@ -227,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				B6CE507E2504873A00E436EE /* APIClient.swift */,
+				B678A61225050D4600EDEAB5 /* APIRouter.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -520,6 +537,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B678A61525051AE400EDEAB5 /* KeyValueStack.swift in Sources */,
 				B6CE503F250485E200E436EE /* AppDelegate.swift in Sources */,
 				B678A61125050BDF00EDEAB5 /* Film.swift in Sources */,
 				B6CE5077250486F200E436EE /* CharactersListView.swift in Sources */,
@@ -528,10 +546,12 @@
 				B6CE507B2504870E00E436EE /* CharactersListViewModel.swift in Sources */,
 				B6F455392504CB2500723A7E /* Response.swift in Sources */,
 				B6CE5041250485E200E436EE /* SceneDelegate.swift in Sources */,
+				B678A61325050D4600EDEAB5 /* APIRouter.swift in Sources */,
 				B6F4553B2504CB3B00723A7E /* Character.swift in Sources */,
 				B6CE5044250485E200E436EE /* SWAPI.xcdatamodeld in Sources */,
 				B6CE50792504870100E436EE /* CharactersDetailsView.swift in Sources */,
 				B6CE507F2504873A00E436EE /* APIClient.swift in Sources */,
+				B678A61725051BE700EDEAB5 /* Loader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

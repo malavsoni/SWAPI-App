@@ -8,13 +8,12 @@
 
 import Foundation
 
-struct Response: Codable {
+struct Response<ResultType:Decodable>: Decodable {
     let count: Int
     let next, previous: String?
-    let peoples: [Character]
+    let results: [ResultType]
     
     enum CodingKeys: String, CodingKey {
-        case count,next,previous
-        case peoples = "results"
+        case count,next,previous,results
     }
 }

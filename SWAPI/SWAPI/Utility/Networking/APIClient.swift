@@ -9,46 +9,8 @@
 import Foundation
 import Alamofire
 
-enum APIRouter {
-    case getCharacters
-    case character(id:String)
-    case film(id:String)
-    case url(url:String)
-    
-    static let baseUrl:String = "https://swapi.dev/api/"
-    
-    var endpoint:String {
-        switch self {
-        case .getCharacters:
-            return "\(APIRouter.baseUrl)people/"
-        case .character(id: let userId):
-            return "\(APIRouter.getCharacters.endpoint)\(userId)/"
-        case .film(id: let filmId):
-            return "\(APIRouter.baseUrl)film/\(filmId)"
-        case.url(url: let url):
-            return url
-        }
-    }
-}
-
-enum SWError: LocalizedError {
-    case badRequest
-    case failedToParseResponse
-    case internetNotAvailable
-    
-    var localizedDescription: String {
-        switch self {
-        case .badRequest:
-            return "Bad Request"
-        case .failedToParseResponse:
-            return "Unexpected values found in response"
-        case .internetNotAvailable:
-            return "No internet connection found."
-        }
-    }
-}
-
 class APIClient: NSObject {
+    /// Singleton Instance
     static let shared:APIClient = APIClient()
     
     /// Check for internet connection status
@@ -107,7 +69,11 @@ class APIClient: NSObject {
 }
 
 extension APIClient {
-    func loadCharactersList(withURL url:String = APIRouter.getCharacters.endpoint, completion:((Result<Response,Error>) -> Void)?) {
+    func fetchCharacters(fromURL url:String = APIRouter.getCharacters.endpoint, completion:((Result<Response<Character>,Error>) -> Void)?) {
         self.request(url, successClass: Response.self, onCompletion: completion)
+    }
+    
+    func fetchFilm(fromURL url:String, completion:((Result<Film,Error>) -> Void)?) {
+        self.request(url, successClass: Film.self, onCompletion: completion)
     }
 }

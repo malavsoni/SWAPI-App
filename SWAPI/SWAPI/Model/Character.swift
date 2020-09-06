@@ -14,7 +14,8 @@ struct Character: Codable, Hashable, Identifiable {
     let name, height, mass, hairColor: String
     let gender, skinColor, eyeColor, birthYear: String
     let homeworld: String
-    let films, species, vehicles, starships: [String]
+    var strFilmsUrl, species, vehicles, starships: [String]
+    var films:[Film] = []
     let created, edited: String
     let url: String
 
@@ -24,7 +25,8 @@ struct Character: Codable, Hashable, Identifiable {
         case skinColor = "skin_color"
         case eyeColor = "eye_color"
         case birthYear = "birth_year"
-        case gender, homeworld, films, species, vehicles, starships, created, edited, url
+        case strFilmsUrl = "films"
+        case gender, homeworld, species, vehicles, starships, created, edited, url
     }
     
     init() {
@@ -37,7 +39,7 @@ struct Character: Codable, Hashable, Identifiable {
         self.eyeColor = "Black"
         self.birthYear = "19BBY"
         self.homeworld = "https://swapi.dev/api/planets/1/"
-        self.films = [
+        self.strFilmsUrl = [
             "https://swapi.dev/api/films/2/",
             "https://swapi.dev/api/films/6/"
         ]
