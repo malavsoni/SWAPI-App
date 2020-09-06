@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class CharactersDetailsViewModel:ObservableObject {
+    @Published var model:Character
+    
+    init(withModel model:Character) {
+        self.model = model
+    }
+}

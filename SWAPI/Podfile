@@ -8,6 +8,7 @@ target 'SWAPI' do
   # Pods for SWAPI
 pod 'SwiftLint'
 pod 'Alamofire'
+pod 'SDWebImageSwiftUI'
 
   target 'SWAPITests' do
     inherit! :search_paths

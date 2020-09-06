@@ -13,16 +13,18 @@ struct CharactersListView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(self.viewModel.peoples, id: \.self) { people in
-                    Text(people.name)
-                        .onAppear {
-                            self.viewModel.loadCharacters(fromLastItem: people)
-                        }
+                ForEach(self.viewModel.characters, id: \.self) { people in
+                    NavigationLink(destination: CharactersDetailsView(character: people)) {
+                        Text(people.name)
+                    }
+                    .onAppear {
+                        self.viewModel.loadCharacters(fromLastItem: people)
+                    }
                 }
             }
         .navigationBarTitle("Star Wars Characters")
         }.onAppear {
-            if self.viewModel.peoples.count == 0 {
+            if self.viewModel.characters.count == 0 {
                 self.viewModel.loadCharacters()
             }
         }

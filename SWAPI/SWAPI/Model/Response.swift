@@ -11,7 +11,7 @@ import Foundation
 struct Response: Codable {
     let count: Int
     let next, previous: String?
-    let peoples: [People]
+    let peoples: [Character]
     
     enum CodingKeys: String, CodingKey {
         case count,next,previous

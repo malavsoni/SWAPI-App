@@ -9,7 +9,7 @@
 import Foundation
 
 class CharactersListViewModel:ObservableObject {
-    @Published var peoples:[People] = []
+    @Published var characters:[Character] = []
     @Published var isLoading:Bool = false
     private var nextPageUrl:String?
     init() {
@@ -18,8 +18,8 @@ class CharactersListViewModel:ObservableObject {
 }
 
 extension CharactersListViewModel {
-    func loadCharacters(fromLastItem item:People? = nil) {
-        if let lastItem = peoples.last, let item = item, let nextPageUrl = nextPageUrl {
+    func loadCharacters(fromLastItem item:Character? = nil) {
+        if let lastItem = characters.last, let item = item, let nextPageUrl = nextPageUrl {
             guard lastItem == item else {
                 return
             }
@@ -37,10 +37,10 @@ private extension CharactersListViewModel {
         switch result {
         case .success(let response):
             self.nextPageUrl = response.next
-            if self.peoples.count == 0 {
-                self.peoples = response.peoples
+            if self.characters.count == 0 {
+                self.characters = response.peoples
             } else {
-                self.peoples.append(contentsOf: response.peoples)
+                self.characters.append(contentsOf: response.peoples)
             }
         case .failure(let error):
             debugPrint("API Failure : \(error.localizedDescription)")
