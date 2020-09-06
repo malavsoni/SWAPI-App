@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B6150BF025048D9C0093999E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B6150BEF25048D9C0093999E /* Alamofire */; };
+		05DD0AEE73283A68DCC0AF03 /* Pods_SWAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1399E195642537A85E11DC19 /* Pods_SWAPI.framework */; };
+		8358FD0EAF513DAA401C1910 /* Pods_SWAPI_SWAPIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F493D8EE087DE0203D3FF303 /* Pods_SWAPI_SWAPIUITests.framework */; };
 		B6CE503F250485E200E436EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CE503E250485E200E436EE /* AppDelegate.swift */; };
 		B6CE5041250485E200E436EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CE5040250485E200E436EE /* SceneDelegate.swift */; };
 		B6CE5044250485E200E436EE /* SWAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6CE5042250485E200E436EE /* SWAPI.xcdatamodeld */; };
@@ -22,6 +23,7 @@
 		B6CE507B2504870E00E436EE /* CharactersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CE507A2504870E00E436EE /* CharactersListViewModel.swift */; };
 		B6CE507D2504871C00E436EE /* CharactersDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CE507C2504871C00E436EE /* CharactersDetailsViewModel.swift */; };
 		B6CE507F2504873A00E436EE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CE507E2504873A00E436EE /* APIClient.swift */; };
+		E019348B1A6BE2BC945EDC93 /* Pods_SWAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15583383E5559D336837C58 /* Pods_SWAPITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1399E195642537A85E11DC19 /* Pods_SWAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AF4FB7080E814FFFDF726D7 /* Pods-SWAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWAPITests.debug.xcconfig"; path = "Target Support Files/Pods-SWAPITests/Pods-SWAPITests.debug.xcconfig"; sourceTree = "<group>"; };
+		62529DFC93C9DE4F4465D38E /* Pods-SWAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWAPI.debug.xcconfig"; path = "Target Support Files/Pods-SWAPI/Pods-SWAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		64C961262CAAAD875AEC53C4 /* Pods-SWAPI-SWAPIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWAPI-SWAPIUITests.debug.xcconfig"; path = "Target Support Files/Pods-SWAPI-SWAPIUITests/Pods-SWAPI-SWAPIUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A15583383E5559D336837C58 /* Pods_SWAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CE503B250485E200E436EE /* SWAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CE503E250485E200E436EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CE5040250485E200E436EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +69,10 @@
 		B6CE507A2504870E00E436EE /* CharactersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewModel.swift; sourceTree = "<group>"; };
 		B6CE507C2504871C00E436EE /* CharactersDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailsViewModel.swift; sourceTree = "<group>"; };
 		B6CE507E2504873A00E436EE /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		C12228CAB6DB99C92E5FE076 /* Pods-SWAPI-SWAPIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWAPI-SWAPIUITests.release.xcconfig"; path = "Target Support Files/Pods-SWAPI-SWAPIUITests/Pods-SWAPI-SWAPIUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C3D3AE7892D0D06C0593BA7B /* Pods-SWAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWAPI.release.xcconfig"; path = "Target Support Files/Pods-SWAPI/Pods-SWAPI.release.xcconfig"; sourceTree = "<group>"; };
+		E55D9E5CA343450230B5E3E9 /* Pods-SWAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWAPITests.release.xcconfig"; path = "Target Support Files/Pods-SWAPITests/Pods-SWAPITests.release.xcconfig"; sourceTree = "<group>"; };
+		F493D8EE087DE0203D3FF303 /* Pods_SWAPI_SWAPIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SWAPI_SWAPIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6150BF025048D9C0093999E /* Alamofire in Frameworks */,
+				05DD0AEE73283A68DCC0AF03 /* Pods_SWAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E019348B1A6BE2BC945EDC93 /* Pods_SWAPITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,12 +96,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8358FD0EAF513DAA401C1910 /* Pods_SWAPI_SWAPIUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3929A6DAD4731F910391B5DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1399E195642537A85E11DC19 /* Pods_SWAPI.framework */,
+				F493D8EE087DE0203D3FF303 /* Pods_SWAPI_SWAPIUITests.framework */,
+				A15583383E5559D336837C58 /* Pods_SWAPITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E86EDA639841B5D4C2A746A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62529DFC93C9DE4F4465D38E /* Pods-SWAPI.debug.xcconfig */,
+				C3D3AE7892D0D06C0593BA7B /* Pods-SWAPI.release.xcconfig */,
+				64C961262CAAAD875AEC53C4 /* Pods-SWAPI-SWAPIUITests.debug.xcconfig */,
+				C12228CAB6DB99C92E5FE076 /* Pods-SWAPI-SWAPIUITests.release.xcconfig */,
+				2AF4FB7080E814FFFDF726D7 /* Pods-SWAPITests.debug.xcconfig */,
+				E55D9E5CA343450230B5E3E9 /* Pods-SWAPITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B6CE5032250485E200E436EE = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +133,8 @@
 				B6CE5057250485E200E436EE /* SWAPITests */,
 				B6CE5062250485E200E436EE /* SWAPIUITests */,
 				B6CE503C250485E200E436EE /* Products */,
+				5E86EDA639841B5D4C2A746A /* Pods */,
+				3929A6DAD4731F910391B5DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,9 +241,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6CE5068250485E200E436EE /* Build configuration list for PBXNativeTarget "SWAPI" */;
 			buildPhases = (
+				C376131D0585000429149682 /* [CP] Check Pods Manifest.lock */,
 				B6CE5037250485E200E436EE /* Sources */,
 				B6CE5038250485E200E436EE /* Frameworks */,
 				B6CE5039250485E200E436EE /* Resources */,
+				B6150BF5250491E20093999E /* ShellScript */,
+				94A3A7514128F5F7C8DD3935 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,7 +254,6 @@
 			);
 			name = SWAPI;
 			packageProductDependencies = (
-				B6150BEF25048D9C0093999E /* Alamofire */,
 			);
 			productName = SWAPI;
 			productReference = B6CE503B250485E200E436EE /* SWAPI.app */;
@@ -223,6 +263,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6CE506B250485E200E436EE /* Build configuration list for PBXNativeTarget "SWAPITests" */;
 			buildPhases = (
+				F199BD15080D4BD42A5C0652 /* [CP] Check Pods Manifest.lock */,
 				B6CE5050250485E200E436EE /* Sources */,
 				B6CE5051250485E200E436EE /* Frameworks */,
 				B6CE5052250485E200E436EE /* Resources */,
@@ -241,9 +282,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6CE506E250485E200E436EE /* Build configuration list for PBXNativeTarget "SWAPIUITests" */;
 			buildPhases = (
+				7AB85F4D14B3D688CAF5FA05 /* [CP] Check Pods Manifest.lock */,
 				B6CE505B250485E200E436EE /* Sources */,
 				B6CE505C250485E200E436EE /* Frameworks */,
 				B6CE505D250485E200E436EE /* Resources */,
+				DBF81A014A0CFB793F7D222F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,7 +331,6 @@
 			);
 			mainGroup = B6CE5032250485E200E436EE;
 			packageReferences = (
-				B6150BEE25048D9C0093999E /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = B6CE503C250485E200E436EE /* Products */;
 			projectDirPath = "";
@@ -327,6 +369,126 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7AB85F4D14B3D688CAF5FA05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SWAPI-SWAPIUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94A3A7514128F5F7C8DD3935 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SWAPI/Pods-SWAPI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SWAPI/Pods-SWAPI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SWAPI/Pods-SWAPI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6150BF5250491E20093999E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		C376131D0585000429149682 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SWAPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBF81A014A0CFB793F7D222F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SWAPI-SWAPIUITests/Pods-SWAPI-SWAPIUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SWAPI-SWAPIUITests/Pods-SWAPI-SWAPIUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SWAPI-SWAPIUITests/Pods-SWAPI-SWAPIUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F199BD15080D4BD42A5C0652 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SWAPITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B6CE5037250485E200E436EE /* Sources */ = {
@@ -504,12 +666,14 @@
 		};
 		B6CE5069250485E200E436EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62529DFC93C9DE4F4465D38E /* Pods-SWAPI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SWAPI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SWAPI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -523,12 +687,14 @@
 		};
 		B6CE506A250485E200E436EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3D3AE7892D0D06C0593BA7B /* Pods-SWAPI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SWAPI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SWAPI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -542,6 +708,7 @@
 		};
 		B6CE506C250485E200E436EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AF4FB7080E814FFFDF726D7 /* Pods-SWAPITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -563,6 +730,7 @@
 		};
 		B6CE506D250485E200E436EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E55D9E5CA343450230B5E3E9 /* Pods-SWAPITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -584,6 +752,7 @@
 		};
 		B6CE506F250485E200E436EE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64C961262CAAAD875AEC53C4 /* Pods-SWAPI-SWAPIUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -603,6 +772,7 @@
 		};
 		B6CE5070250485E200E436EE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C12228CAB6DB99C92E5FE076 /* Pods-SWAPI-SWAPIUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -660,25 +830,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B6150BEE25048D9C0093999E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.2.2;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B6150BEF25048D9C0093999E /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B6150BEE25048D9C0093999E /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B6CE5042250485E200E436EE /* SWAPI.xcdatamodeld */ = {
