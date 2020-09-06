@@ -9,8 +9,23 @@
 import SwiftUI
 
 struct CharactersListView: View {
+    @ObservedObject var viewModel = CharactersListViewModel()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                ForEach(self.viewModel.peoples, id: \.self) { people in
+                    Text(people.name)
+                        .onAppear {
+                            self.viewModel.loadCharacters(fromLastItem: people)
+                        }
+                }
+            }
+        .navigationBarTitle("Star Wars Characters")
+        }.onAppear {
+            if self.viewModel.peoples.count == 0 {
+                self.viewModel.loadCharacters()
+            }
+        }
     }
 }
 
