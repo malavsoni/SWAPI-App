@@ -55,6 +55,7 @@ extension CharactersListViewModel {
         return true
     }
 }
+
 // MARK: - Private Helpers
 private extension CharactersListViewModel {
     /// Handle response of Characters API
