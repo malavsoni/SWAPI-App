@@ -58,10 +58,15 @@ extension CharactersDetailsViewModel {
 
 // MARK: - Accesible Methods
 extension CharactersDetailsViewModel {
-    func fetchFilm(fromUrl url:String? = nil) {
+    
+    /// Fetch films in background
+    /// - Parameter url: URL of Film
+    /// - Returns: Bool indicating API Call initiated orr ignored
+    @discardableResult
+    func fetchFilm(fromUrl url:String? = nil) -> Bool {
         debugPrint("Fetching Film")
         guard isLoading == false else {
-            return
+            return false
         }
         if let url = url {
             self.isLoading = true
@@ -69,9 +74,14 @@ extension CharactersDetailsViewModel {
         } else if let lastUrl = self.model.strFilmsUrl.last {
             self.isLoading = true
             APIClient.shared.fetchFilm(fromURL: lastUrl, completion: self.handleFilmResponse(result:))
+        } else {
+            return false
         }
+        
+        return true
     }
 }
+
 // MARK: - Private Helpers
 private extension CharactersDetailsViewModel {
     func handleFilmResponse(result:Result<Film,Error>) {
@@ -98,5 +108,12 @@ private extension CharactersDetailsViewModel {
                 self.isErrorOccured = true
             }
         }
+    }
+}
+
+// MARK: - TestCase Helpers
+extension CharactersDetailsViewModel {
+    var totalFilms:Int {
+        self.model.strFilmsUrl.count
     }
 }

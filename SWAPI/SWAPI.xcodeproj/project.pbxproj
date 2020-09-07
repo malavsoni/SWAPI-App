@@ -31,6 +31,7 @@
 		B6EBA07D25064D48003D199D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EBA07C25064D48003D199D /* Extension.swift */; };
 		B6EBA07F25065082003D199D /* CharactersListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EBA07E25065082003D199D /* CharactersListViewModelTests.swift */; };
 		B6EBA08125065390003D199D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6EBA08025065390003D199D /* Colors.xcassets */; };
+		B6EBA083250666D1003D199D /* CharactersDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EBA082250666D1003D199D /* CharactersDetailsViewModelTests.swift */; };
 		B6F455392504CB2500723A7E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F455382504CB2500723A7E /* Response.swift */; };
 		B6F4553B2504CB3B00723A7E /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4553A2504CB3B00723A7E /* Character.swift */; };
 		E019348B1A6BE2BC945EDC93 /* Pods_SWAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15583383E5559D336837C58 /* Pods_SWAPITests.framework */; };
@@ -87,6 +88,7 @@
 		B6EBA07C25064D48003D199D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		B6EBA07E25065082003D199D /* CharactersListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewModelTests.swift; sourceTree = "<group>"; };
 		B6EBA08025065390003D199D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		B6EBA082250666D1003D199D /* CharactersDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		B6F455382504CB2500723A7E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		B6F4553A2504CB3B00723A7E /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		C12228CAB6DB99C92E5FE076 /* Pods-SWAPI-SWAPIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWAPI-SWAPIUITests.release.xcconfig"; path = "Target Support Files/Pods-SWAPI-SWAPIUITests/Pods-SWAPI-SWAPIUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			children = (
 				B6CE5058250485E200E436EE /* SWAPITests.swift */,
 				B6EBA07E25065082003D199D /* CharactersListViewModelTests.swift */,
+				B6EBA082250666D1003D199D /* CharactersDetailsViewModelTests.swift */,
 				B6CE505A250485E200E436EE /* Info.plist */,
 			);
 			path = SWAPITests;
@@ -576,6 +579,7 @@
 			files = (
 				B6EBA07F25065082003D199D /* CharactersListViewModelTests.swift in Sources */,
 				B6CE5059250485E200E436EE /* SWAPITests.swift in Sources */,
+				B6EBA083250666D1003D199D /* CharactersDetailsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

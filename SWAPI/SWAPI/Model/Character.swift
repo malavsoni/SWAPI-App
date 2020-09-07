@@ -11,13 +11,13 @@ import Foundation
 // MARK: - People
 struct Character: Codable, Hashable, Identifiable {
     let id = UUID()
-    let name, height, mass, hairColor: String
-    let gender, skinColor, eyeColor, birthYear: String
-    let homeworld: String
+    var name, height, mass, hairColor: String
+    var gender, skinColor, eyeColor, birthYear: String
+    var homeworld: String
     var strFilmsUrl, species, vehicles, starships: [String]
     var films:[Film] = []
-    let created, edited: String
-    let url: String
+    var created, edited: String
+    var url: String
 
     enum CodingKeys: String, CodingKey {
         case name, height, mass
@@ -30,32 +30,53 @@ struct Character: Codable, Hashable, Identifiable {
     }
     
     init() {
-        self.name = "Luke Skywalker"
-        self.height = "172"
-        self.mass = "77"
-        self.hairColor = "black"
-        self.gender = "male"
-        self.skinColor = "white"
-        self.eyeColor = "Black"
-        self.birthYear = "19BBY"
-        self.homeworld = "https://swapi.dev/api/planets/1/"
-        self.strFilmsUrl = [
+        self.name = ""
+        self.height = ""
+        self.mass = ""
+        self.hairColor = ""
+        self.gender = ""
+        self.skinColor = ""
+        self.eyeColor = ""
+        self.birthYear = ""
+        self.homeworld = ""
+        self.strFilmsUrl = []
+        self.species = []
+        self.vehicles = []
+        self.starships = []
+        self.created = ""
+        self.edited = ""
+        self.url = ""
+    }
+    
+    static func sample() -> Character {
+        var sample =  Character()
+        sample.name = "Luke Skywalker"
+        sample.height = "172"
+        sample.mass = "77"
+        sample.hairColor = "black"
+        sample.gender = "male"
+        sample.skinColor = "white"
+        sample.eyeColor = "Black"
+        sample.birthYear = "19BBY"
+        sample.homeworld = "https://swapi.dev/api/planets/1/"
+        sample.strFilmsUrl = [
+            "https://swapi.dev/api/films/1/",
             "https://swapi.dev/api/films/2/",
-            "https://swapi.dev/api/films/6/",
-            "https://swapi.dev/api/films/8/",
-            "https://swapi.dev/api/films/10/"
+            "https://swapi.dev/api/films/3/",
+            "https://swapi.dev/api/films/4/"
         ]
-        self.species = [
+        sample.species = [
             "https://swapi.dev/api/species/1/"
         ]
-        self.vehicles = [
+        sample.vehicles = [
             "https://swapi.dev/api/vehicles/14/"
         ]
-        self.starships = [
+        sample.starships = [
             "https://swapi.dev/api/starships/12/"
         ]
-        self.created = "2014-12-09T13:50:51.644000Z"
-        self.edited = "2014-12-20T21:17:56.891000Z"
-        self.url = "https://swapi.dev/api/people/1/"
+        sample.created = "2014-12-09T13:50:51.644000Z"
+        sample.edited = "2014-12-20T21:17:56.891000Z"
+        sample.url = "https://swapi.dev/api/people/1/"
+        return sample
     }
 }
