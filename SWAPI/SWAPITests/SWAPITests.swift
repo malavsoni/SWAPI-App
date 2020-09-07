@@ -9,6 +9,8 @@
 import XCTest
 @testable import SWAPI
 
+typealias Expectation = XCTestExpectation
+
 class SWAPITests: XCTestCase {
 
     override func setUpWithError() throws {

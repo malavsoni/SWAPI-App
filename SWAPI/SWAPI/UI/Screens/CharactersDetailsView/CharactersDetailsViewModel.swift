@@ -8,16 +8,24 @@
 
 import Foundation
 
-class CharactersDetailsViewModel:ObservableObject {
+/// CharactersDetails ViewModel
+class CharactersDetailsViewModel:ObservableObject, SWErrorHandling {
     
     @Published private var model:Character
     @Published var isLoading:Bool = false
     
+    // SWErrorHandling
+    @Published var isErrorOccured: Bool = false
+    @Published var errorMessage: String = ""
+    
+    /// Init with character model
+    /// - Parameter model: character model
     init(withModel model:Character) {
         self.model = model
     }
 }
 
+// MARK: - Accesible Variables
 extension CharactersDetailsViewModel {
     var name:String {
         self.model.name
@@ -48,6 +56,7 @@ extension CharactersDetailsViewModel {
     }
 }
 
+// MARK: - Accesible Methods
 extension CharactersDetailsViewModel {
     func fetchFilm(fromUrl url:String? = nil) {
         debugPrint("Fetching Film")
@@ -62,24 +71,32 @@ extension CharactersDetailsViewModel {
             APIClient.shared.fetchFilm(fromURL: lastUrl, completion: self.handleFilmResponse(result:))
         }
     }
-    
-    private func handleFilmResponse(result:Result<Film,Error>) {
+}
+// MARK: - Private Helpers
+private extension CharactersDetailsViewModel {
+    func handleFilmResponse(result:Result<Film,Error>) {
         switch result {
         case .success(let film):
-            if self.model.films.count == 0 {
-                self.model.films = [film]
-            } else {
-                self.model.films.insert(film, at: 0)
-            }
+            
+            // Insert Fetched Film In Array
+            self.model.films.insert(film, at: 0)
+            
+            // Remove Last URL from List
             self.model.strFilmsUrl.removeLast()
+            
+            // Set Loading Status to False
             self.isLoading = false
+            
+            // Load Next Film if available
             if let lastUrl = self.model.strFilmsUrl.last {
                 self.fetchFilm(fromUrl: lastUrl)
             }
         case .failure(let error):
             self.isLoading = false
-            debugPrint("Failed to fetch films : \(error)")
-            
+            if error.localizedDescription.count > 0 {
+                self.errorMessage = error.localizedDescription
+                self.isErrorOccured = true
+            }
         }
     }
 }

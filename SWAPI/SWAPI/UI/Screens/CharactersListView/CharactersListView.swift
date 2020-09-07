@@ -12,22 +12,35 @@ struct CharactersListView: View {
     @ObservedObject var viewModel = CharactersListViewModel()
     var body: some View {
         NavigationView {
-            List {
-                ForEach(self.viewModel.characters, id: \.self) { people in
-                    NavigationLink(destination: CharactersDetailsView(character: people)) {
-                        Text(people.name)
+            Group {
+                if self.viewModel.isInternetAvailable {
+                    List {
+                        ForEach(self.viewModel.characters, id: \.self) { people in
+                            NavigationLink(destination: CharactersDetailsView(character: people)) {
+                                Text(people.name)
+                            }
+                            .onAppear {
+                                self.viewModel.loadCharacters(fromLastItem: people)
+                            }
+                        }
                     }
-                    .onAppear {
-                        self.viewModel.loadCharacters(fromLastItem: people)
+                } else {
+                    VStack {
+                        NoInternetConnectionView(onRetry: {
+                            self.viewModel.loadCharacters()
+                        })
                     }
                 }
             }
-        .navigationBarTitle("Star Wars Characters")
-        }.onAppear {
+            .navigationBarTitle("Star Wars Characters")
+        }
+        .onAppear {
             if self.viewModel.characters.count == 0 {
                 self.viewModel.loadCharacters()
             }
-        }.loadingIndicator(self.$viewModel.isLoading)
+        }
+        .loadingIndicator(self.$viewModel.isLoading)
+        .showAlert(isPresented: self.$viewModel.isErrorOccured, message: self.viewModel.errorMessage)
     }
 }
 

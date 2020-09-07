@@ -14,6 +14,7 @@
 		B678A61325050D4600EDEAB5 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678A61225050D4600EDEAB5 /* APIRouter.swift */; };
 		B678A61525051AE400EDEAB5 /* KeyValueStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678A61425051AE400EDEAB5 /* KeyValueStack.swift */; };
 		B678A61725051BE700EDEAB5 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B678A61625051BE600EDEAB5 /* Loader.swift */; };
+		B686D87325052984006C4B19 /* NoInternetConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B686D87225052984006C4B19 /* NoInternetConnectionView.swift */; };
 		B6CE503F250485E200E436EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CE503E250485E200E436EE /* AppDelegate.swift */; };
 		B6CE5041250485E200E436EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CE5040250485E200E436EE /* SceneDelegate.swift */; };
 		B6CE5044250485E200E436EE /* SWAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B6CE5042250485E200E436EE /* SWAPI.xcdatamodeld */; };
@@ -27,6 +28,9 @@
 		B6CE507B2504870E00E436EE /* CharactersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CE507A2504870E00E436EE /* CharactersListViewModel.swift */; };
 		B6CE507D2504871C00E436EE /* CharactersDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CE507C2504871C00E436EE /* CharactersDetailsViewModel.swift */; };
 		B6CE507F2504873A00E436EE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CE507E2504873A00E436EE /* APIClient.swift */; };
+		B6EBA07D25064D48003D199D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EBA07C25064D48003D199D /* Extension.swift */; };
+		B6EBA07F25065082003D199D /* CharactersListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EBA07E25065082003D199D /* CharactersListViewModelTests.swift */; };
+		B6EBA08125065390003D199D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6EBA08025065390003D199D /* Colors.xcassets */; };
 		B6F455392504CB2500723A7E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F455382504CB2500723A7E /* Response.swift */; };
 		B6F4553B2504CB3B00723A7E /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F4553A2504CB3B00723A7E /* Character.swift */; };
 		E019348B1A6BE2BC945EDC93 /* Pods_SWAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15583383E5559D336837C58 /* Pods_SWAPITests.framework */; };
@@ -60,6 +64,7 @@
 		B678A61225050D4600EDEAB5 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		B678A61425051AE400EDEAB5 /* KeyValueStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStack.swift; sourceTree = "<group>"; };
 		B678A61625051BE600EDEAB5 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		B686D87225052984006C4B19 /* NoInternetConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetConnectionView.swift; sourceTree = "<group>"; };
 		B6CE503B250485E200E436EE /* SWAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CE503E250485E200E436EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6CE5040250485E200E436EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +84,9 @@
 		B6CE507A2504870E00E436EE /* CharactersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewModel.swift; sourceTree = "<group>"; };
 		B6CE507C2504871C00E436EE /* CharactersDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersDetailsViewModel.swift; sourceTree = "<group>"; };
 		B6CE507E2504873A00E436EE /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		B6EBA07C25064D48003D199D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		B6EBA07E25065082003D199D /* CharactersListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewModelTests.swift; sourceTree = "<group>"; };
+		B6EBA08025065390003D199D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B6F455382504CB2500723A7E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		B6F4553A2504CB3B00723A7E /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		C12228CAB6DB99C92E5FE076 /* Pods-SWAPI-SWAPIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWAPI-SWAPIUITests.release.xcconfig"; path = "Target Support Files/Pods-SWAPI-SWAPIUITests/Pods-SWAPI-SWAPIUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +152,7 @@
 				B678A60E250503DB00EDEAB5 /* DestinationView.swift */,
 				B678A61425051AE400EDEAB5 /* KeyValueStack.swift */,
 				B678A61625051BE600EDEAB5 /* Loader.swift */,
+				B686D87225052984006C4B19 /* NoInternetConnectionView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -188,6 +197,7 @@
 				B6F455372504CB0F00723A7E /* Model */,
 				B6CE5071250485EB00E436EE /* UI */,
 				B6CE5047250485E200E436EE /* Assets.xcassets */,
+				B6EBA08025065390003D199D /* Colors.xcassets */,
 				B6CE504C250485E200E436EE /* LaunchScreen.storyboard */,
 				B6CE504F250485E200E436EE /* Info.plist */,
 				B6CE5042250485E200E436EE /* SWAPI.xcdatamodeld */,
@@ -208,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				B6CE5058250485E200E436EE /* SWAPITests.swift */,
+				B6EBA07E25065082003D199D /* CharactersListViewModelTests.swift */,
 				B6CE505A250485E200E436EE /* Info.plist */,
 			);
 			path = SWAPITests;
@@ -235,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				B6CE50732504860500E436EE /* Networking */,
+				B6EBA07C25064D48003D199D /* Extension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -391,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6CE504E250485E200E436EE /* LaunchScreen.storyboard in Resources */,
+				B6EBA08125065390003D199D /* Colors.xcassets in Resources */,
 				B6CE504B250485E200E436EE /* Preview Assets.xcassets in Resources */,
 				B6CE5048250485E200E436EE /* Assets.xcassets in Resources */,
 			);
@@ -547,6 +560,8 @@
 				B6F455392504CB2500723A7E /* Response.swift in Sources */,
 				B6CE5041250485E200E436EE /* SceneDelegate.swift in Sources */,
 				B678A61325050D4600EDEAB5 /* APIRouter.swift in Sources */,
+				B6EBA07D25064D48003D199D /* Extension.swift in Sources */,
+				B686D87325052984006C4B19 /* NoInternetConnectionView.swift in Sources */,
 				B6F4553B2504CB3B00723A7E /* Character.swift in Sources */,
 				B6CE5044250485E200E436EE /* SWAPI.xcdatamodeld in Sources */,
 				B6CE50792504870100E436EE /* CharactersDetailsView.swift in Sources */,
@@ -559,6 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6EBA07F25065082003D199D /* CharactersListViewModelTests.swift in Sources */,
 				B6CE5059250485E200E436EE /* SWAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

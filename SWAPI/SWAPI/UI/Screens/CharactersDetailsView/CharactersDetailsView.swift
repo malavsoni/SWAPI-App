@@ -34,12 +34,12 @@ struct CharactersDetailsView: View {
             Section(header: Text("Films").fontWeight(.bold)) {
                 ForEach(self.viewModel.films) { film in
                     KeyValueVStack(key: film.title, value: "Opening Crawl: \(film.openingCrawl.count)")
-                        .animation(.easeInOut)
                 }
             }
         }
         .listStyle(GroupedListStyle())
         .navigationBarTitle(self.viewModel.name)
+        .showAlert(isPresented: self.$viewModel.isErrorOccured, message: self.viewModel.errorMessage)
         .onAppear {
             self.viewModel.fetchFilm()
         }

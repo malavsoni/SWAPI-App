@@ -46,3 +46,8 @@ enum SWError: LocalizedError {
         }
     }
 }
+
+protocol SWErrorHandling {
+    var isErrorOccured:Bool { get set }
+    var errorMessage:String { get set }
+}

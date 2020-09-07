@@ -14,7 +14,8 @@ struct Film: Codable, Hashable, Identifiable {
     let title: String
     let episodeID: Int
     let openingCrawl, director, producer, releaseDate: String
-    var charactersUrl, planets, starships, vehicles: [String]
+    var charactersUrl: [String]
+    let planets, starships, vehicles: [String]
     var characters:[Character] = []
     let species: [String]
     let created, edited: String

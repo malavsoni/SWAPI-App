@@ -41,7 +41,9 @@ struct Character: Codable, Hashable, Identifiable {
         self.homeworld = "https://swapi.dev/api/planets/1/"
         self.strFilmsUrl = [
             "https://swapi.dev/api/films/2/",
-            "https://swapi.dev/api/films/6/"
+            "https://swapi.dev/api/films/6/",
+            "https://swapi.dev/api/films/8/",
+            "https://swapi.dev/api/films/10/"
         ]
         self.species = [
             "https://swapi.dev/api/species/1/"
