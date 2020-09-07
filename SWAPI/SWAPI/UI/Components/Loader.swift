@@ -51,6 +51,7 @@ private struct LoadingView: ViewModifier {
                 loadingView
                     .animation(.easeInOut)
                     .zIndex(2.0)
+                    .accessibility(identifier: "LoadingView")
             }
         }
     }

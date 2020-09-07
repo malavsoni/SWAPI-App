@@ -18,24 +18,24 @@ struct CharactersDetailsView: View {
     
     var body: some View {
         List {
-            Section(header: Text("Details").fontWeight(.bold)) {
+            Section(header: header("Details")) {
                 KeyValueHStack(key: "Birth Year", value: self.viewModel.birthYear)
-            }
+            }.accessibility(identifier: "Details")
             
-            Section(header: Text("Physical Attributes").fontWeight(.bold)) {
+            Section(header: header("Physical Attributes")) {
                 KeyValueHStack(key: "Height", value: self.viewModel.height)
                 KeyValueHStack(key: "Mass", value: self.viewModel.mass)
                 KeyValueHStack(key: "Hair Color", value: self.viewModel.hairColor)
                 KeyValueHStack(key: "Skin Color", value: self.viewModel.skinColor)
                 KeyValueHStack(key: "Eye Color", value: self.viewModel.eyeColor)
                 KeyValueHStack(key: "Gender", value: self.viewModel.gender)
-            }
+            }.accessibility(identifier: "Physical Attributes")
             
-            Section(header: Text("Films").fontWeight(.bold)) {
+            Section(header: header("Films")) {
                 ForEach(self.viewModel.films) { film in
                     KeyValueVStack(key: film.title, value: "Opening Crawl: \(film.openingCrawl.count)")
                 }
-            }
+            }.accessibility(identifier: "Films")
         }
         .listStyle(GroupedListStyle())
         .navigationBarTitle(self.viewModel.name)
@@ -43,6 +43,11 @@ struct CharactersDetailsView: View {
         .onAppear {
             self.viewModel.fetchFilm()
         }
+        .accessibility(identifier: "CharactersDetailsView")
+    }
+    
+    func header(_ text:String) -> some View {
+        return Text(text).fontWeight(.bold).foregroundColor(.blue)
     }
 }
 

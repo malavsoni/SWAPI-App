@@ -19,6 +19,7 @@ struct CharactersListView: View {
                             NavigationLink(destination: CharactersDetailsView(character: people)) {
                                 Text(people.name)
                             }
+                            .foregroundColor(.blue)
                             .onAppear {
                                 self.viewModel.loadCharacters(fromLastItem: people)
                             }
@@ -28,11 +29,12 @@ struct CharactersListView: View {
                     VStack {
                         NoInternetConnectionView(onRetry: {
                             self.viewModel.loadCharacters()
-                        })
+                        }).accessibility(identifier: "NoInternetConnectionView")
                     }
                 }
             }
             .navigationBarTitle("Star Wars Characters")
+            .accessibility(identifier: "Star Wars Characters")
         }
         .onAppear {
             if self.viewModel.characters.count == 0 {

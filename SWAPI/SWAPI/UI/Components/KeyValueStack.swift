@@ -16,7 +16,8 @@ struct KeyValueHStack:View {
             Text(key)
             Spacer()
             Text(value)
-        }
+                .foregroundColor(.blue)
+        }.accessibility(identifier: self.key)
     }
 }
 
@@ -29,6 +30,7 @@ struct KeyValueVStack:View {
                 .font(.body)
             Text(value)
                 .font(.footnote)
-        }
+            .foregroundColor(.blue)
+        }.accessibility(identifier: self.key)
     }
 }

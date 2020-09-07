@@ -84,6 +84,8 @@ extension CharactersDetailsViewModel {
 
 // MARK: - Private Helpers
 private extension CharactersDetailsViewModel {
+    /// Handle the response from server
+    /// - Parameter result: Contains Film Model or Error if API Call fails
     func handleFilmResponse(result:Result<Film,Error>) {
         switch result {
         case .success(let film):
