@@ -4,7 +4,7 @@
   - XCode 11.7
   - SWIFTUI ( New Reactive Framework By Apple)
   - MVVM Architecture
-  - Design the screen in SwiftUI 1.0 ( I am also comfortable with Storyboard also  ) 
+  - Design the screen in SwiftUI 1.0 ( I am also comfortable with Storyboard ) 
   - API Call with Error Handling
   - Test cases for ViewModels
   
